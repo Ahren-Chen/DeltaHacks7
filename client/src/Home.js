@@ -8,29 +8,31 @@ function Home() {
   return (
     <div className="background">
       <div className="title">
-        <img src={Graylogo} style={{ height: 30, width: 33 }} />
+        <img src={Graylogo} style={{ height: 50, width: 60 }} />
         <div className="companyName">G.R.A.Y GROUP</div>
       </div>
       <div className="backgroundTwo">
         <div className="openNowWrapper">
           <div className="stackText">
-            <div className="ShopLocal">SHOP LOCAL</div>
+            <div className="ShopLocal">LOCAL LOVE</div>
             <div className="findBusinesses">Find Local Businesses Near you</div>
           </div>
-          <img src={OpenNow} style={{ height: 230, width: 350 }} />
+          <div className="openNow">
+            <img src={OpenNow} style={{ height: 342, width: 530 }} />
+          </div>
         </div>
       </div>
       <div className="backgroundThree">
-        <img src={Phone} style={{ height: 150, width: 225 }} />
+        <img src={Phone} style={{ height: 275, width: 412.5 }} />
         <div className="stackTextTwo">
           <div className="enterLocation">1. Enter Your Location</div>
           <div className="enterLocation">2. Type In What Food You Want</div>
+          <div className="buttonWrapper">
+            <Link className="button" to="/Map">
+              TRY NOW
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className="backgroundFour">
-        <Link className="button" to="/Map">
-          TRY NOW
-        </Link>
       </div>
     </div>
   );

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
+
 import time
->>>>>>> master
 from .models import BigBuisness
 from .models import SmallBusiness
 from .serializers import DeltaSerializerBig
@@ -9,10 +7,7 @@ from .serializers import DeltaSerializerSmall
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-<<<<<<< HEAD
 import consume
-=======
->>>>>>> master
 
 @api_view(['GET', 'POST'])
 def business_list_big(request, format=None):

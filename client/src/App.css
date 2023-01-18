@@ -8,11 +8,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -32,7 +27,7 @@
 .backgroundTwo{
   background-color: #A1CFD4;
   width: 100vw;
-  height: 40vh;
+  height: 45vh;
 
   
 }
@@ -40,36 +35,49 @@
 .companyName{
   color: #2B2B2B;
   font-family: 'DM Sans', sans-serif;
-  font-size: 24px;
+  font-size: 35px;
   font-weight: bold;
 }
 
 .title{
+  /* width: 100px; */
   display: flex;
   flex-direction: row;
+  height: 5vw;
+  align-items: center;
 }
 
 .openNowWrapper{
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.openNow{
+  display: grid;
+  width: 100vw;
   justify-items: end;
 
 }
 
 .ShopLocal{
-  min-width: 400px;
+  min-width: 500px;
   font-family: 'DM Sans', sans-serif;
   color: #111F4F;
-  font-size: 50px;
-  padding-left: 190px;
-  padding-right: 90px;
-  font-weight: 1000;
+  font-size: 80px;
+  font-weight: 900;
 }
 
 .findBusinesses{
   font-family: 'DM Sans', sans-serif;
   color: white;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 700;
+  min-width: 100px;
+  justify-content: center;
+  text-align: center;
 
 }
 
@@ -79,7 +87,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  width: 200em;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -102,7 +110,7 @@
 .backgroundThree{
     background-color: #d0e7e2;
       width: 100vw;
-      height: 40vh;
+      height: 45vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -113,16 +121,18 @@
 .enterLocation{
   font-family: 'DM Sans', sans-serif;
     color: #111F4F;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 800;
     padding-left: 120px;
 
 }
 
 .stackTextTwo {
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
 
 .backgroundFour{
@@ -135,23 +145,35 @@
     align-items: center;
 }
 
+.buttonWrapper{
+  width: 60em;
+  height: 7em;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
 .button {
-  width: 200px;
-  height: 25px;
+  width: 30em;
+  height: 3em;
   border: none;
   background-color: rgba(7, 60, 220, 0.651);
   color: white;
   border-radius: 20px;
   font-weight: bold;
-  display: inline-block;
   text-align: center;
+  text-justify: center;
   text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button:hover {
   background-color: rgba(12, 48, 155, 0.651);
-  width: 210px;
-  height: 27.5px;
+  width: 31em;
+  height: 3.5em;
   transition-timing-function: ease-in;
   transition: 0.05s;
 

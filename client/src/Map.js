@@ -1,4 +1,6 @@
 import "./Map.css";
+import Graylogo from "./images/GRAY.png";
+
 import {
   GoogleMap,
   useLoadScript,
@@ -11,7 +13,7 @@ import axios from "axios";
 const libraries = ["places"];
 const mapContainerStyle = {
   width: "50vw",
-  height: "50vh",
+  height: "70vh",
 };
 
 const center = {
@@ -117,51 +119,68 @@ function Map() {
   if (!isLoaded) return "Loading Maps";
 
   return (
-    <div>
-      <rect id="space"> </rect>
+    <div className="background">
+      <div className="title">
+        <img src={Graylogo} style={{ height: 50, width: 60 }} />
+        <div className="companyName">G.R.A.Y GROUP</div>
+      </div>
+      {/* <rect id="space"> </rect>
       <rect id="nav"> </rect>
       <rect id="list"> </rect>
       <div id="EnterLoc">Enter Your Location:</div>
       <div id="EnterFood">Enter Your Desired Meal:</div>
-      <div id="output">Here's a list of small restaurants:</div>
-      <input
-        className="Food"
-        value={search}
-        onChange={handleChange}
-        placeholder="Search Food"
-      />
-      <button className="Food" onClick={handleSearch}>
-        Enter
-      </button>
-      <input
-        className="Location"
-        value={location}
-        onChange={handleLocationChange}
-        placeholder="Search Location"
-      />
-      <button className="Location" onClick={handleSearch}>
-        Enter
-      </button>
-      <GoogleMap
-        id="map"
-        mapContainerStyle={mapContainerStyle}
-        zoom={12}
-        center={center}
-      >
-        {searchStore.map((marker) => (
-          <Marker
-            key={marker.name}
-            position={{
-              lat: marker.geometry.location.lat,
-              lng: marker.geometry.location.lng,
-            }}
-            onClick={() => {
-              setSelect(marker);
-              console.log(select);
-            }}
-          />
-        ))}
-      </GoogleMap>
+      <div id="output">Here's a list of small restaurants:</div> */}
+      <div className="searchWrapper">
+        <div className="backgroundFive">
+          <div className="inputWrapper">
+            <input
+              className="Food"
+              value={search}
+              onChange={handleChange}
+              placeholder="Search Food"
+            />
+            <input
+              className="Location"
+              value={location}
+              onChange={handleLocationChange}
+              placeholder="Search Location"
+            />
+            <button className="Location" onClick={handleSearch}>
+              Enter
+            </button>
+          </div>
+          <div className="mapWrapper">
+            <GoogleMap
+              mapContainerStyle={mapContainerStyle}
+              zoom={12}
+              center={center}
+            >
+              {searchStore.map((marker) => (
+                <Marker
+                  key={marker.name}
+                  position={{
+                    lat: marker.geometry.location.lat,
+                    lng: marker.geometry.location.lng,
+                  }}
+                  onClick={() => {
+                    setSelect(marker);
+                    console.log(select);
+                  }}
+                />
+              ))}
+            </GoogleMap>
+          </div>
+        </div>
+        <div className="resultsBackgroundWrapper">
+          <div className="resultsBackground">
+            {searchStore.map((marker) => (
+              <div className="result" key={marker.place_id}>
+                {marker.name}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
       {select ? (
         <div>
           <h2>{select.name}</h2>

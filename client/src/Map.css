@@ -1,7 +1,7 @@
 body {
-    background-color: #E1EBED;
+    /* background-color: #E1EBED; */
     /* padding-bottom: 1500px; */
-    width: 100vh;
+    /* width: 100vh; */
 
 }
 
@@ -27,6 +27,9 @@ body {
 
 #space {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 1000px;
     height: 530px;
     left: 130px;
@@ -37,44 +40,41 @@ body {
 }
 
 #map {
-    position: absolute;
+    /* position: absolute;
     top: 350px;
-    left: 320px;
+    left: 320px; */
     border-style: solid;
 
 }
 
 input {
-    width: 500px;
+    width: 435px;
     height: 40px;
     text-align: center;
 
 }
 
 button {
-    width: 80px;
+    width: 100px;
     height: 45px;
-    position: relative;
     left: 80px;
+    background-color: rgba(4, 29, 155, 0.607);
+    color: white;
+    font-weight: bold;
+    border: none;
 }
 
 button:hover{
-    background-color: #E2B706;
-}
+    background-color: rgba(3, 21, 111, 0.854);}
 
 .Location {
-    position: absolute;
-    top: 160px;
-    left: 650px;
     border-radius: 20px;
     margin: 5px;
 
 }
 
 .Food {
-    position: absolute;
-    top: 160px;
-    left: 100px;
+ 
     border-radius: 20px;
     margin: 5px;
 }
@@ -125,3 +125,65 @@ button:hover{
     text-transform: uppercase;
     color: #324B4F;
 }
+
+.backgroundFive{
+    background-color: #E1EBED;
+    height: 90vh;
+    width: 60vw;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+.searchWrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.resultsBackgroundWrapper{
+    height: 90vh;
+    width: 40vw;
+    background-color:#E1EBED ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resultsBackground{
+    background-color: white;
+    height: 80vh;
+    width: 35vw;
+    align-items: center;  
+    justify-content: center;
+    overflow: auto;
+
+}
+
+.result{
+    font-size: 30px;
+    font-weight: 500;
+    height: 150px;
+    width: 500px;
+    border: 2px solid black;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 40px;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    border-radius: 5px;
+
+}
+
+.mapWrapper{
+    height:80vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputWrapper{
+    margin-top: 1em;
+}
+
