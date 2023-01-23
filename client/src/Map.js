@@ -53,7 +53,7 @@ function Map() {
     e.preventDefault();
     axios
       .get(
-        `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=43.6532,-79.3832&radius=500&types=food&name=${search}&key=AIzaSyBF4Cv2BD8upA_-1t-ZrqPQ5KARWKiTqm4`
+        `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=43.6532,-79.3832&radius=500&types=food&name=${search}&key=APIKEY`
       )
       .then((response) => {
         console.log(response.data.results);
